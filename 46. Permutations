@@ -43,7 +43,8 @@ var permute = function(nums) {
 
       arr.push(remainder[i])
 
-      per(arr.slice(), remainder.slice(0, i).concat(remainder.slice(i+1)));
+     // per(arr.slice(), remainder.slice(0, i).concat(remainder.slice(i+1)));
+      per([...arr], [...remainder.slice(0, i), ...remainder.slice(i+1)])
     
      arr.pop()
     }
